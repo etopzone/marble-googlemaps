@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgml xmlns="http://edu.kde.org/marble/dgml/2.0">
+    <document>
+
+        <head>
+            <name>Google Maps</name>
+            <target>earth</target>
+            <theme>googlemaps</theme>
+            <icon pixmap="preview.png"/>
+            <visible>true</visible>
+            <description><![CDATA[<p>A <i>global roadmap</i> provided by Google.]]></description>
+            <zoom>
+                <minimum> 900 </minimum>
+                <maximum> 3500 </maximum>
+                <discrete> true </discrete>
+            </zoom>
+        </head>
+
+        <map bgcolor="#000000">
+            <canvas/>
+            <target/>
+            <layer name="googlemaps" backend="texture" >
+                <!-- Let Google Maps rendered tiles expire after one year
+                     or 31536000 seconds -->
+                <texture name="map" expire="31536000" >
+                    <sourcedir format="PNG"> earth/googlemaps </sourcedir>
+                    <storageLayout levelZeroColumns="1" levelZeroRows="1" maximumTileLevel="19" mode="Custom" />
+                    <projection name="Mercator" />
+                    <downloadUrl protocol="http" host="khm.google.de" path="/vt/lbw/kh" query="v=34&amp;hl=de&amp;x={x}&amp;s=&amp;y={y}&amp;z={zoomLevel}" />
+                    <downloadPolicy usage="Browse" maximumConnections="1" />
+                    <downloadPolicy usage="Bulk" maximumConnections="1" />
+                </texture>
+            </layer>
+        </map>
+        <settings>
+            <property name="coordinate-grid">
+                <value>true</value>
+                <available>true</available>
+            </property>
+            <property name="overviewmap">
+                <value>true</value>
+                <available>true</available>
+            </property>
+            <property name="compass">
+                <value>true</value>
+                <available>true</available>
+            </property>
+            <property name="scalebar">
+                <value>true</value>
+                <available>true</available>
+            </property>
+        </settings>
+        <legend>
+            <section name="coordinate-grid" checkable="true" connect="coordinate-grid" spacing="12">
+                <heading>Coordinate Grid</heading>
+            </section>
+        </legend>
+    </document>
+</dgml>
