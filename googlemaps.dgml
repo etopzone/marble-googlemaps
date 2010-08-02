@@ -26,9 +26,7 @@
                     <sourcedir format="PNG"> earth/googlemaps </sourcedir>
                     <storageLayout levelZeroColumns="1" levelZeroRows="1" maximumTileLevel="19" mode="Custom" />
                     <projection name="Mercator" />
-                    <downloadUrl protocol="http" host="khm.google.de" path="/vt/lbw/kh" query="v=34&amp;hl=de&amp;x={x}&amp;s=&amp;y={y}&amp;z={zoomLevel}" />
-                    <downloadPolicy usage="Browse" maximumConnections="1" />
-                    <downloadPolicy usage="Bulk" maximumConnections="1" />
+                    <downloadUrl protocol="http" host="mt.google.com" path="/vt/lrys=m@130&amp;hl=de&amp;x={x}&amp;y={y}&amp;z={zoomLevel}&amp;s=Ga" />
                 </texture>
             </layer>
         </map>
